@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anuraag Nandan | Portfolio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #ecfdf5;
+    color: #064e3b;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: #10b981;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+}
+
+h2 {
+    border-left: 5px solid #059669;
+    padding-left: 10px;
+}
+
+/* ✅ UPDATED: Scroll animation */
+.card {
+    background: #ffffff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border: 1px solid #a7f3d0;
+    transition: all 0.6s ease;
+
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* clickable hint */
+.card.clickable {
+    cursor: pointer;
+}
+
+.card.clickable:hover {
+    background: #ecfdf5;
+}
+
+.content {
+    display: none;
+    margin-top: 10px;
+    color: #065f46;
+}
+
+.skills span {
+    display: inline-block;
+    background: #059669;
+    color: white;
+    padding: 6px 12px;
+    margin: 5px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+a {
+    color: #047857;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #059669;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #d1fae5;
+    margin-top: 30px;
+    color: #065f46;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Anuraag Nandan</h1>
+    <p>Electronics & VLSI Enthusiast | ASIC Design | Digital Systems</p>
+</header>
+
+<div class="container">
+
+    <h2>👨‍💻 About Me</h2>
+    <div class="card">
+        <p>
+       I am a postgraduate engineering student pursuing an M.Tech in VLSI Design & Embedded Systems, with a background in Electronics and Communication Engineering. 
+I am interested in ASIC design, digital systems, and hardware optimization.
+        </p>
+    </div>
+
+    <h2>🛠 Skills</h2>
+    <div class="card skills">
+        <span>Verilog</span>
+        <span>Digital Design</span>
+        <span>CMOS</span>
+        <span>Python</span>
+        <span>Machine Learning</span>
+        <span>PLC Basics</span>
+    </div>
+
+    <h2>🚀 Projects</h2>
+
+    <div class="card clickable" onclick="toggle(this)">
+        <h3>4-bit Priority Encoder Implementation on ZedBoard FPGA</h3>
+        <div class="content">
+            <p><b>Description:</b> Designed and implemented a 4-bit priority encoder using Verilog HDL and deployed on FPGA.</p>
+            <ul>
+                <li>Developed RTL design using Verilog</li>
+                <li>Created testbench for verification</li>
+                <li>Implemented using Vivado</li>
+                <li>Validated on ZedBoard hardware</li>
+            </ul>
+            <p><b>Tools:</b> Verilog, Vivado, FPGA</p>
+            <p><b>Outcome:</b> Successfully verified real-time hardware implementation.</p>
+        </div>
+    </div>
+
+    <div class="card clickable" onclick="toggle(this)">
+        <h3>Transistor Width vs Delay Analysis using Machine Learning</h3>
+        <div class="content">
+            <p><b>Description:</b> Studied the relationship between transistor sizing and delay.</p>
+            <ul>
+                <li>Prepared CMOS dataset</li>
+                <li>Applied regression models</li>
+                <li>Analyzed delay patterns</li>
+            </ul>
+            <p><b>Tools:</b> Python, ML</p>
+            <p><b>Outcome:</b> Identified optimal sizing trends.</p>
+        </div>
+    </div>
+
+    <div class="card clickable" onclick="toggle(this)">
+        <h3>Portfolio Website</h3>
+        <div class="content">
+            <p><b>Description:</b> Built and deployed personal portfolio website.</p>
+            <ul>
+                <li>Designed responsive UI</li>
+                <li>Added interactive sections</li>
+                <li>Deployed using GitHub Pages</li>
+            </ul>
+            <p><b>Tools:</b> HTML, CSS, JavaScript</p>
+            <p><b>Outcome:</b> Created professional online presence.</p>
+        </div>
+    </div>
+
+    <div class="card clickable" onclick="toggle(this)">
+        <h3>Modified Singular Value Decomposition (MSVD)</h3>
+        <div class="content">
+            <p><b>Description:</b> Developed optimized SVD algorithm for hardware applications.</p>
+            <ul>
+                <li>Analyzed standard SVD limitations</li>
+                <li>Designed optimized computation approach</li>
+                <li>Evaluated hardware feasibility</li>
+            </ul>
+            <p><b>Tools:</b> Python / MATLAB</p>
+            <p><b>Outcome:</b> Improved computational efficiency.</p>
+        </div>
+    </div>
+
+    <h2>🏢 Experience</h2>
+
+    <div class="card">
+        <h3>Bharat Heavy Electricals Limited (BHEL) – Industrial Training (4 Weeks)</h3>
+        <p>Completed training focused on control panel design for power plant systems.</p>
+        <ul>
+            <li>Observed control panel wiring and design</li>
+            <li>Learned relays, breakers, and control components</li>
+            <li>Understood industrial safety and layout</li>
+        </ul>
+        <p><b>Outcome:</b> Practical understanding of power plant control systems.</p>
+    </div>
+
+    <div class="card">
+        <h3>S2D Process Solutions Pvt Ltd – Internship</h3>
+        <p>Worked on PLC wiring and industrial automation systems including the CASSATA Ice Cream Cutting Machine.</p>
+    </div>
+
+    <h2>🎯 Goals</h2>
+    <div class="card">
+        <p>I aim to build a career in VLSI and ASIC design focusing on high-performance and secure hardware systems.</p>
+        <ul>
+            <li>Master RTL design and digital systems</li>
+            <li>Learn full ASIC design flow</li>
+            <li>Explore hardware security</li>
+            <li>Work on real-world chip design problems</li>
+        </ul>
+    </div>
+
+    <h2>📄 Resume</h2>
+    <div class="card">
+        <a href="resume.pdf" class="btn" download>Download Resume</a>
+    </div>
+
+    <h2>📬 Contact</h2>
+    <div class="card">
+        <p>Email: <a href="mailto:anuraagnandan2003@gmail.com">anuraagnandan2003@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/anuraag-n-1a6a97266/" target="_blank">linkedin.com/in/anuraag-n-1a6a97266</a></p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Anuraag Nandan</p>
+</footer>
+
+<script>
+function toggle(element) {
+    let content = element.querySelector(".content");
+    content.style.display = (content.style.display === "block") ? "none" : "block";
+}
+
+/* ✅ ADDED: Scroll animation */
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+document.querySelectorAll(".card").forEach((el) => {
+    observer.observe(el);
+});
+</script>
+
+</body>
+</html>
