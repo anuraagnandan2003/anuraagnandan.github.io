@@ -3,265 +3,207 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anuraag Nandan | Portfolio</title>
-
+<title>Anuraag Nandan V | Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #ecfdf5;
-    color: #064e3b;
-}
-
-header {
-    text-align: center;
-    padding: 60px 20px;
-    background: #10b981;
-    color: white;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 42px;
-}
-
-header p {
-    font-size: 18px;
-    opacity: 0.9;
-}
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 30px;
-}
-
-h2 {
-    border-left: 5px solid #059669;
-    padding-left: 10px;
-}
-
-/* ✅ UPDATED: Scroll animation */
-.card {
-    background: #ffffff;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 12px;
-    border: 1px solid #a7f3d0;
-    transition: all 0.6s ease;
-
-    opacity: 0;
-    transform: translateY(40px);
-}
-
-.card.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-/* clickable hint */
-.card.clickable {
-    cursor: pointer;
-}
-
-.card.clickable:hover {
-    background: #ecfdf5;
-}
-
-.content {
-    display: none;
-    margin-top: 10px;
-    color: #065f46;
-}
-
-.skills span {
-    display: inline-block;
-    background: #059669;
-    color: white;
-    padding: 6px 12px;
-    margin: 5px;
-    border-radius: 6px;
-    font-size: 14px;
-}
-
-a {
-    color: #047857;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 20px;
-    background: #059669;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #d1fae5;
-    margin-top: 30px;
-    color: #065f46;
-}
+html {scroll-behavior:smooth;}
 </style>
 </head>
 
-<body>
+<body class="bg-black text-white font-sans overflow-x-hidden">
 
-<header>
-    <h1>Anuraag Nandan</h1>
-    <p>Electronics & VLSI Enthusiast | ASIC Design | Digital Systems</p>
-</header>
+<!-- NAVBAR -->
+<nav class="fixed w-full bg-black/70 backdrop-blur-xl border-b border-gray-800 z-50">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<h1 id="navName" class="font-bold text-xl bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent opacity-0 transition-all duration-500">Anuraag Nandan</h1>
+<div class="space-x-8 text-sm">
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
 
-<div class="container">
+<!-- HERO -->
+<section id="hero" class="h-screen flex items-center justify-center text-center px-6 relative">
+<div>
+<h2 id="heroTitle" class="text-6xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent transition-all duration-300">
+Anuraag Nandan
+</h2>
+<p class="text-gray-400 text-lg mb-6">VLSI • FPGA • Embedded Systems</p>
 
-    <h2>👨‍💻 About Me</h2>
-    <div class="card">
-        <p>
-       I am a postgraduate engineering student pursuing an M.Tech in VLSI Design & Embedded Systems, with a background in Electronics and Communication Engineering. 
-I am interested in ASIC design, digital systems, and hardware optimization.
-        </p>
-    </div>
-
-    <h2>🛠 Skills</h2>
-    <div class="card skills">
-        <span>Verilog</span>
-        <span>Digital Design</span>
-        <span>CMOS</span>
-        <span>Python</span>
-        <span>Machine Learning</span>
-        <span>PLC Basics</span>
-    </div>
-
-    <h2>🚀 Projects</h2>
-
-    <div class="card clickable" onclick="toggle(this)">
-        <h3>4-bit Priority Encoder Implementation on ZedBoard FPGA</h3>
-        <div class="content">
-            <p><b>Description:</b> Designed and implemented a 4-bit priority encoder using Verilog HDL and deployed on FPGA.</p>
-            <ul>
-                <li>Developed RTL design using Verilog</li>
-                <li>Created testbench for verification</li>
-                <li>Implemented using Vivado</li>
-                <li>Validated on ZedBoard hardware</li>
-            </ul>
-            <p><b>Tools:</b> Verilog, Vivado, FPGA</p>
-            <p><b>Outcome:</b> Successfully verified real-time hardware implementation.</p>
-        </div>
-    </div>
-
-    <div class="card clickable" onclick="toggle(this)">
-        <h3>Transistor Width vs Delay Analysis using Machine Learning</h3>
-        <div class="content">
-            <p><b>Description:</b> Studied the relationship between transistor sizing and delay.</p>
-            <ul>
-                <li>Prepared CMOS dataset</li>
-                <li>Applied regression models</li>
-                <li>Analyzed delay patterns</li>
-            </ul>
-            <p><b>Tools:</b> Python, ML</p>
-            <p><b>Outcome:</b> Identified optimal sizing trends.</p>
-        </div>
-    </div>
-
-    <div class="card clickable" onclick="toggle(this)">
-        <h3>Portfolio Website</h3>
-        <div class="content">
-            <p><b>Description:</b> Built and deployed personal portfolio website.</p>
-            <ul>
-                <li>Designed responsive UI</li>
-                <li>Added interactive sections</li>
-                <li>Deployed using GitHub Pages</li>
-            </ul>
-            <p><b>Tools:</b> HTML, CSS, JavaScript</p>
-            <p><b>Outcome:</b> Created professional online presence.</p>
-        </div>
-    </div>
-
-    <div class="card clickable" onclick="toggle(this)">
-        <h3>Modified Singular Value Decomposition (MSVD)</h3>
-        <div class="content">
-            <p><b>Description:</b> Developed optimized SVD algorithm for hardware applications.</p>
-            <ul>
-                <li>Analyzed standard SVD limitations</li>
-                <li>Designed optimized computation approach</li>
-                <li>Evaluated hardware feasibility</li>
-            </ul>
-            <p><b>Tools:</b> Python / MATLAB</p>
-            <p><b>Outcome:</b> Improved computational efficiency.</p>
-        </div>
-    </div>
-
-    <h2>🏢 Experience</h2>
-
-    <div class="card">
-        <h3>Bharat Heavy Electricals Limited (BHEL) – Industrial Training (4 Weeks)</h3>
-        <p>Completed training focused on control panel design for power plant systems.</p>
-        <ul>
-            <li>Observed control panel wiring and design</li>
-            <li>Learned relays, breakers, and control components</li>
-            <li>Understood industrial safety and layout</li>
-        </ul>
-        <p><b>Outcome:</b> Practical understanding of power plant control systems.</p>
-    </div>
-
-    <div class="card">
-        <h3>S2D Process Solutions Pvt Ltd – Internship</h3>
-        <p>Worked on PLC wiring and industrial automation systems including the CASSATA Ice Cream Cutting Machine.</p>
-    </div>
-
-    <h2>🎯 Goals</h2>
-    <div class="card">
-        <p>I aim to build a career in VLSI and ASIC design focusing on high-performance and secure hardware systems.</p>
-        <ul>
-            <li>Master RTL design and digital systems</li>
-            <li>Learn full ASIC design flow</li>
-            <li>Explore hardware security</li>
-            <li>Work on real-world chip design problems</li>
-        </ul>
-    </div>
-
-    <h2>📄 Resume</h2>
-    <div class="card">
-        <a href="resume.pdf" class="btn" download>Download Resume</a>
-    </div>
-
-    <h2>📬 Contact</h2>
-    <div class="card">
-        <p>Email: <a href="mailto:anuraagnandan2003@gmail.com">anuraagnandan2003@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/anuraag-n-1a6a97266/" target="_blank">linkedin.com/in/anuraag-n-1a6a97266</a></p>
-    </div>
+<!-- Resume Download Button -->
+<a href="Resume.pdf" download class="inline-block bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
+Download Resume
+</a>
 
 </div>
+</section>
 
-<footer>
-    <p>© 2026 Anuraag Nandan</p>
-</footer>
+<!-- ABOUT -->
+<section id="about" class="py-24 max-w-5xl mx-auto px-6">
+<h2 class="text-4xl font-bold mb-6 text-purple-400">About Me</h2>
+<p class="text-gray-300 text-lg leading-relaxed">
+M.Tech student in <strong>VLSI & Embedded Systems</strong> with hands-on experience in <strong>RTL, FPGA, and PLC systems</strong>. I build efficient hardware solutions and focus on <strong>validation, optimization, and system-level design</strong>.
+</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-24 max-w-5xl mx-auto px-6">
+<h2 class="text-4xl font-bold mb-10 text-pink-400">Technical Skills</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+  <div class="p-4 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20">
+    <p class="font-semibold">VLSI</p>
+    <p class="text-gray-400 text-sm">RTL Design, CMOS, Digital Circuits</p>
+  </div>
+  <div class="p-4 rounded-xl bg-gradient-to-r from-purple-500/20 to-pink-500/20">
+    <p class="font-semibold">Tools</p>
+    <p class="text-gray-400 text-sm">Verilog, VHDL, Vivado</p>
+  </div>
+  <div class="p-4 rounded-xl bg-gradient-to-r from-green-500/20 to-blue-500/20">
+    <p class="font-semibold">Programming</p>
+    <p class="text-gray-400 text-sm">Python, C, Data Analysis</p>
+  </div>
+  <div class="p-4 rounded-xl bg-gradient-to-r from-yellow-500/20 to-orange-500/20">
+    <p class="font-semibold">Embedded</p>
+    <p class="text-gray-400 text-sm">Embedded Systems, PLC</p>
+  </div>
+  <div class="p-4 rounded-xl bg-gradient-to-r from-indigo-500/20 to-blue-500/20">
+    <p class="font-semibold">Concepts</p>
+    <p class="text-gray-400 text-sm">Signal Processing, ML Basics</p>
+  </div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-24">
+<div class="max-w-6xl mx-auto px-6">
+<h2 class="text-4xl font-bold mb-12 text-blue-400">Projects</h2>
+<div class="space-y-6">
+
+<div class="border border-gray-800 rounded-xl p-6 cursor-pointer" onclick="toggleProject('p1')">
+<h3 class="text-xl font-bold">CMOS Delay Analysis</h3>
+<div id="p1" class="hidden mt-4 text-gray-400 space-y-2">
+<p><strong>Overview:</strong> Studied impact of transistor sizing (W/L) on CMOS gate delay.</p>
+<p><strong>Tools:</strong> Python, NumPy, Pandas, Matplotlib</p>
+<p><strong>Work:</strong> Cleaned simulation data, plotted delay vs W/L, built regression model.</p>
+<p><strong>Concepts:</strong> CMOS delay, curve fitting, trade-offs (speed vs power).</p>
+<p><strong>Result:</strong> Identified optimal sizing trend to minimize delay.</p>
+</div>
+</div>
+
+<div class="border border-gray-800 rounded-xl p-6 cursor-pointer" onclick="toggleProject('p2')">
+<h3 class="text-xl font-bold">FPGA Priority Encoder</h3>
+<div id="p2" class="hidden mt-4 text-gray-400 space-y-2">
+<p><strong>Overview:</strong> 4-bit priority encoder designed in Verilog.</p>
+<p><strong>Tools:</strong> Verilog, Xilinx Vivado, ZedBoard (Zynq-7000)</p>
+<p><strong>Work:</strong> RTL coding, testbench simulation, synthesis, on-board validation.</p>
+<p><strong>Concepts:</strong> Combinational logic, RTL design, timing checks.</p>
+<p><strong>Result:</strong> Correct priority output verified on FPGA hardware.</p>
+</div>
+</div>
+
+<div class="border border-gray-800 rounded-xl p-6 cursor-pointer" onclick="toggleProject('p3')">
+<h3 class="text-xl font-bold">CCTV Image Enhancement</h3>
+<div id="p3" class="hidden mt-4 text-gray-400 space-y-2">
+<p><strong>Overview:</strong> Enhanced low-quality CCTV images using MSVD.</p>
+<p><strong>Tools:</strong> Python, OpenCV, NumPy</p>
+<p><strong>Work:</strong> Applied MSVD decomposition, filtering, contrast enhancement.</p>
+<p><strong>Concepts:</strong> Signal processing, noise reduction, image enhancement.</p>
+<p><strong>Result:</strong> Improved clarity and visibility for analysis.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="py-24 bg-gray-950">
+<div class="max-w-5xl mx-auto px-6">
+<h2 class="text-4xl font-bold mb-10 text-green-400">Experience</h2>
+<div class="space-y-6">
+
+<div class="border border-gray-800 rounded-xl p-6 cursor-pointer" onclick="toggleExperience('e1')">
+<h3 class="font-semibold text-lg">PLC Intern – S2D Process Solutions</h3>
+<div id="e1" class="hidden mt-4 text-gray-400 space-y-2">
+<p><strong>Role:</strong> PLC Control Panel Intern</p>
+<p><strong>Work:</strong> Panel wiring, I/O signal interfacing, debugging faults.</p>
+<p><strong>Tools:</strong> PLC modules, relays, sensors, wiring diagrams</p>
+<p><strong>Concepts:</strong> Industrial automation, real-time control systems</p>
+<p><strong>Impact:</strong> Reduced troubleshooting time by systematic signal validation.</p>
+</div>
+</div>
+
+<div class="border border-gray-800 rounded-xl p-6 cursor-pointer" onclick="toggleExperience('e2')">
+<h3 class="font-semibold text-lg">Intern – BHEL</h3>
+<div id="e2" class="hidden mt-4 text-gray-400 space-y-2">
+<p><strong>Role:</strong> Electronics Intern</p>
+<p><strong>Work:</strong> Observed PCB assembly, testing, validation processes.</p>
+<p><strong>Tools:</strong> Testing rigs, inspection tools, documentation</p>
+<p><strong>Concepts:</strong> Traction electronics, system integration</p>
+<p><strong>Impact:</strong> Gained understanding of large-scale manufacturing workflows.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 text-center">
+<h2 class="text-4xl font-bold mb-6 text-yellow-400">Contact</h2>
+<p class="text-gray-400 mb-6">anuraagnandan2003@gmail.com</p>
+<a href="mailto:anuraagnandan2003@gmail.com" class="bg-yellow-500 px-6 py-3 rounded-xl">Email Me</a>
+</section>
 
 <script>
-function toggle(element) {
-    let content = element.querySelector(".content");
-    content.style.display = (content.style.display === "block") ? "none" : "block";
+// FIX: Added missing toggleProject function
+// Single open accordion for projects
+function toggleProject(id) {
+  const all = ['p1','p2','p3'];
+  all.forEach(p => {
+    if (p !== id) document.getElementById(p).classList.add('hidden');
+  });
+  const el = document.getElementById(id);
+  el.classList.toggle('hidden');
 }
 
-/* ✅ ADDED: Scroll animation */
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-});
+// Single open accordion for experience
+function toggleExperience(id) {
+  const all = ['e1','e2'];
+  all.forEach(e => {
+    if (e !== id) document.getElementById(e).classList.add('hidden');
+  });
+  const el = document.getElementById(id);
+  el.classList.toggle('hidden');
+}
 
-document.querySelectorAll(".card").forEach((el) => {
-    observer.observe(el);
+// Hero animation
+const hero = document.getElementById('hero');
+const heroTitle = document.getElementById('heroTitle');
+const navName = document.getElementById('navName');
+
+window.addEventListener('scroll', () => {
+  const rect = hero.getBoundingClientRect();
+  const progress = Math.min(Math.max(-rect.top / rect.height, 0), 1);
+
+  const translateY = progress * -120;
+  const translateX = progress * -120;
+  const scale = 1 - progress * 0.6;
+
+  heroTitle.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+  heroTitle.style.opacity = `${1 - progress}`;
+  heroTitle.style.filter = `blur(${progress * 6}px)`;
+
+  if (progress > 0.5) {
+    navName.classList.remove('opacity-0');
+    navName.classList.add('opacity-100');
+  } else {
+    navName.classList.remove('opacity-100');
+    navName.classList.add('opacity-0');
+  }
 });
 </script>
 
